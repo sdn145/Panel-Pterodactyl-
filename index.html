@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pyni Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;background:#080b14;color:white;margin:0}
+header{padding:30px;text-align:center;background:#111827}
+.container{padding:20px;display:grid;gap:15px}
+.card{background:#1f2937;padding:20px;border-radius:15px}
+button{background:#2563eb;color:white;padding:12px;border:0;border-radius:8px}
+.price{color:#60a5fa;font-size:22px}
+</style>
+</head>
+<body>
+<header>
+<h1>🚀 Pyni Store</h1>
+<p>Marketplace Panel Pterodactyl</p>
+</header>
+
+<div class="container" id="products"></div>
+
+<script>
+const products=[
+["1 GB","Rp 2.000"],["2 GB","Rp 3.000"],["3 GB","Rp 4.000"],
+["4 GB","Rp 5.000"],["5 GB","Rp 6.000"],["6 GB","Rp 7.000"],
+["7 GB","Rp 8.000"],["8 GB","Rp 9.000"],["9 GB","Rp 10.000"],
+["10 GB","Rp 11.000"],["Unlimited RAM","Rp 15.000"],
+["ADP Panel","Rp 25.000"]
+];
+
+document.getElementById("products").innerHTML =
+products.map(p=>`
+<div class="card">
+<h2>⚡ ${p[0]}</h2>
+<div class="price">${p[1]}</div>
+<p>Panel Pterodactyl aktif cepat</p>
+<button onclick="order('${p[0]}')">Beli</button>
+</div>`).join("");
+
+function order(p){
+alert("Order "+p+" silahkan hubungi admin WhatsApp");
+}
+</script>
+</body>
+</html>
