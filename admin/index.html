@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Pyni Store</title></head>
+<body style="font-family:Arial;padding:30px">
+<h1>Dashboard Admin Pyni Store</h1>
+
+<h3>Pengaturan Pembayaran</h3>
+
+<label>Nomor Dana</label><br>
+<input id="dana" placeholder="08xxxx"><br><br>
+
+<label>WhatsApp Admin</label><br>
+<input id="wa" placeholder="08xxxx"><br><br>
+
+<button onclick="save()">Simpan</button>
+
+<script>
+function save(){
+localStorage.setItem("dana",dana.value);
+localStorage.setItem("wa",wa.value);
+alert("Data pembayaran tersimpan");
+}
+</script>
+</body>
+</html>
